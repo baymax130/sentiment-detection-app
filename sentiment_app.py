@@ -1,6 +1,9 @@
 import streamlit as st
 from transformers import pipeline
 
+# First Streamlit command must be set_page_config
+st.set_page_config(page_title="🌍 Multilingual Sentiment Detector", page_icon="🔍")
+
 # Load the multilingual sentiment analysis model
 @st.cache_resource
 def load_model():
@@ -8,9 +11,7 @@ def load_model():
 
 sentiment_pipeline = load_model()
 
-# Streamlit UI setup
-st.set_page_config(page_title="🌍 Multilingual Sentiment Detector", page_icon="🔍")
-
+# Streamlit UI
 st.title("🔍 Multilingual Sentiment Detection App")
 st.write("Analyze the sentiment of text in multiple languages!")
 
@@ -25,7 +26,6 @@ if st.button("Analyze Sentiment"):
             label = result['label']
             score = result['score']
 
-            # Display result
             if "positive" in label.lower():
                 st.success(f"😄 Positive Sentiment! (Confidence: {score:.2f})")
             elif "negative" in label.lower():

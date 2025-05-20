@@ -13,7 +13,7 @@ def load_model():
 sentiment_pipeline = load_model()
 
 # Streamlit UI
-st.title("🔍 Multilingual Sentiment Detection App")
+st.title("Multilingual Sentiment Detection App")
 st.write("Analyze the sentiment of text in multiple languages!")
 
 # Text input
@@ -49,7 +49,7 @@ if st.button("Analyze Sentiment"):
 st.markdown(
     """
     <hr>
-    <p style="text-align:center;">Built with ❤️ using Streamlit and Hugging Face Transformers</p>
+    <p style="text-align:center;">Built using Streamlit and Hugging Face Transformers</p>
     """,
     unsafe_allow_html=True
 )

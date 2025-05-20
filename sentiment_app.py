@@ -32,11 +32,11 @@ if st.button("Analyze Sentiment"):
 
             # Display sentiment result
             if "positive" in label.lower():
-                st.success(f"😄 Positive Sentiment! (Confidence: {score:.2f})")
+                st.success(f"😄 Wonderful!I sense some positive vibes (Confidence: {score:.2f})")
             elif "negative" in label.lower():
-                st.error(f"😔 Negative Sentiment! (Confidence: {score:.2f})")
+                st.error(f"😔 Oh shoot! That's certainly very bad(Confidence: {score:.2f})")
             else:
-                st.info(f"🙂 Neutral Sentiment! (Confidence: {score:.2f})")
+                st.info(f"🙂 Hmm!I'll Save this info for later (Confidence: {score:.2f})")
 
             # Display time taken
             elapsed_time = end_time - start_time
